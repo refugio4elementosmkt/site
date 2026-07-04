@@ -113,7 +113,7 @@
     }
     .nav__i { display: flex; align-items: center; justify-content: space-between; }
     .nav__logo { display: flex; align-items: center; gap: 12px; }
-    .nav__logo img { height: 46px; width: auto; }
+    .nav__logo img { height: 46px; width: auto; mix-blend-mode: multiply; }
     .nav__nome { font-family: var(--ff-titulo); font-size: 1rem; font-weight: 600; line-height: 1.25; }
     .nav__links { display: none; gap: 24px; list-style: none; font-family: var(--ff-destaque); font-size: .85rem; font-weight: 700; }
     .nav__links a:hover { color: var(--lilas); }
@@ -355,16 +355,9 @@
     /* ══ Foto equipe coletiva ═══════════════════════ */
     .foto-equipe {
       border-radius: var(--raio); overflow: hidden;
-      background: linear-gradient(135deg, var(--lilas) 0%, var(--verde) 100%);
-      min-height: 380px; position: relative;
-      display: flex; align-items: center; justify-content: center;
+      position: relative;
     }
-    .foto-equipe img { width: 100%; height: 100%; object-fit: cover; }
-    .foto-equipe__ph {
-      text-align: center; color: rgba(255,255,255,.8); padding: 32px;
-      font-family: var(--ff-destaque); font-size: .9rem;
-    }
-    .foto-equipe__ph span { font-size: 3.5rem; display: block; margin-bottom: 12px; }
+    .foto-equipe img { width: 100%; height: auto; display: block; }
 
     /* ══ CTA principal ══════════════════════════════ */
     .cta-sec {
@@ -586,18 +579,20 @@
           </div>
         </div>
         <div class="hero__img">
-          <img
-            src="img/logo.png"
-            alt="Logo Refúgio dos 4 Elementos"
-            style="width:200px;max-width:60%;margin:0 auto 24px;display:block;mix-blend-mode:multiply;"
-            onerror="this.style.display='none'"
-          >
-          <img
-            src="img/equipe.jpg"
-            alt="Equipe do Refúgio dos 4 Elementos"
-            style="border-radius:var(--raio);box-shadow:var(--sombra);width:100%;object-fit:cover;max-height:400px;"
-            onerror="this.style.display='none'"
-          >
+          <div style="display:flex;gap:14px;align-items:flex-end;">
+            <img
+              src="img/logo.png"
+              alt="Logo Refúgio dos 4 Elementos"
+              style="width:110px;flex-shrink:0;mix-blend-mode:multiply;margin-bottom:0;"
+              onerror="this.style.display='none'"
+            >
+            <img
+              src="img/equipe.jpg"
+              alt="Equipe do Refúgio dos 4 Elementos"
+              style="flex:1;border-radius:var(--raio);box-shadow:var(--sombra);width:100%;object-fit:cover;max-height:420px;"
+              onerror="this.style.display='none'"
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -667,13 +662,7 @@
 
         <!-- Foto coletiva da equipe -->
         <div class="foto-equipe">
-          <!-- TODO: substituir pela foto real do espaço ou da equipe -->
-          <img src="img/equipe.jpg" alt="Equipe do Refúgio dos 4 Elementos" onerror="this.style.display='none'">
-          <div class="foto-equipe__ph">
-            <span>📸</span>
-            <!-- TODO: inserir foto real da equipe em img/equipe.jpg -->
-            Foto da equipe ou do espaço
-          </div>
+          <img src="img/equipe.jpg" alt="Equipe do Refúgio dos 4 Elementos">
         </div>
 
         <div class="permitase__cards">
@@ -966,7 +955,6 @@
                 <div class="equipe-card">
                   <div class="equipe-card__foto">
                     <img src="img/daniela.jpg" alt="Daniela Sampaio" onerror="this.style.display='none'">
-                    <div class="equipe-card__foto-ph"><span>🌿</span>Daniela Sampaio</div>
                   </div>
                   <div class="equipe-card__info">
                     <div class="equipe-card__nome">Daniela Sampaio</div>
@@ -989,7 +977,6 @@
                 <div class="equipe-card">
                   <div class="equipe-card__foto">
                     <img src="img/jean.jpg" alt="Jean Carlos Amorim" onerror="this.style.display='none'">
-                    <div class="equipe-card__foto-ph"><span>🌀</span>Jean Carlos Amorim</div>
                   </div>
                   <div class="equipe-card__info">
                     <div class="equipe-card__nome">Jean Carlos Amorim</div>
@@ -1012,7 +999,6 @@
                 <div class="equipe-card">
                   <div class="equipe-card__foto">
                     <img src="img/eunice.jpg" alt="Eunice Maia" onerror="this.style.display='none'">
-                    <div class="equipe-card__foto-ph"><span>💧</span>Eunice Maia</div>
                   </div>
                   <div class="equipe-card__info">
                     <div class="equipe-card__nome">Eunice Maia</div>
@@ -1032,7 +1018,6 @@
                 <div class="equipe-card">
                   <div class="equipe-card__foto">
                     <img src="img/joelson.jpg" alt="Joelson Sampaio" onerror="this.style.display='none'">
-                    <div class="equipe-card__foto-ph"><span>🔥</span>Joelson Sampaio</div>
                   </div>
                   <div class="equipe-card__info">
                     <div class="equipe-card__nome">Joelson Sampaio</div>
@@ -1055,7 +1040,6 @@
                 <div class="equipe-card">
                   <div class="equipe-card__foto">
                     <img src="img/breno.jpg" alt="Breno Montalvão" onerror="this.style.display='none'">
-                    <div class="equipe-card__foto-ph"><span>✨</span>Breno Montalvão</div>
                   </div>
                   <div class="equipe-card__info">
                     <div class="equipe-card__nome">Breno Montalvão</div>
