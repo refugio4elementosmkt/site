@@ -342,6 +342,16 @@
     .dep-card__autor { font-family: var(--ff-destaque); font-weight: 700; font-size: .85rem; }
     .dep-card__servico { font-size: .8rem; color: var(--lilas); margin-top: 3px; }
 
+    .dep-card--img { padding: 16px; }
+    .dep-card--img::before { display: none; }
+    .dep-card--img img { width: 100%; border-radius: 8px; display: block; }
+    .dep-card--img .dep-imgs { display: flex; gap: 10px; }
+    .dep-card--img .dep-imgs img { flex: 1; object-fit: cover; max-height: 420px; }
+    .dep-card--img .dep-card__fonte {
+      font-family: var(--ff-destaque); font-size: .78rem; font-weight: 700;
+      color: var(--lilas); text-align: center; margin-top: 10px;
+    }
+
     /* ══ Foto equipe coletiva ═══════════════════════ */
     .foto-equipe {
       border-radius: var(--raio); overflow: hidden;
@@ -576,11 +586,16 @@
           </div>
         </div>
         <div class="hero__img">
-          <!-- Usar o logo completo vertical colorido -->
           <img
             src="img/logo.png"
-            alt="Refúgio dos 4 Elementos"
-            class="hero__logo-grande"
+            alt="Logo Refúgio dos 4 Elementos"
+            style="width:200px;max-width:60%;margin:0 auto 24px;display:block;filter:drop-shadow(0 8px 24px rgba(139,111,168,.25));"
+            onerror="this.style.display='none'"
+          >
+          <img
+            src="img/equipe.jpg"
+            alt="Equipe do Refúgio dos 4 Elementos"
+            style="border-radius:var(--raio);box-shadow:var(--sombra);width:100%;object-fit:cover;max-height:400px;"
             onerror="this.style.display='none'"
           >
         </div>
@@ -945,50 +960,111 @@
         <div class="carousel" id="carEquipe">
           <div class="carousel__track" id="trackEquipe">
 
-            <!-- TODO: substituir pelos terapeutas reais com foto e credenciais -->
+            <!-- DANIELA SAMPAIO -->
             <div class="carousel__slide">
               <div class="equipe-slide">
                 <div class="equipe-card">
                   <div class="equipe-card__foto">
                     <img src="img/daniela.jpg" alt="Daniela Sampaio" onerror="this.style.display='none'">
-                    <div class="equipe-card__foto-ph">
-                      <span>🌿</span>
-                      <!-- TODO: inserir foto em img/daniela.jpg -->
-                      Foto da Daniela
-                    </div>
+                    <div class="equipe-card__foto-ph"><span>🌿</span>Daniela Sampaio</div>
                   </div>
                   <div class="equipe-card__info">
                     <div class="equipe-card__nome">Daniela Sampaio</div>
-                    <div class="equipe-card__cargo">Terapeuta holística · Fundadora</div>
+                    <div class="equipe-card__cargo">Terapeuta Holística · Cofundadora</div>
                     <ul class="equipe-card__creds">
-                      <!-- TODO: preencher com as credenciais reais da Daniela -->
-                      <li>Consteladora Familiar Sistêmica</li>
-                      <li>Terapeuta Xamânica dos 4 Elementos</li>
-                      <li>Reiki e Aromaterapia</li>
-                      <li>3 anos de atendimento</li>
+                      <li>Consteladora Sistêmica Familiar (Curso Avançado — ALMT)</li>
+                      <li>Guardiã da Medicina Ayahuasca</li>
+                      <li>Aromaterapeuta e Cristaloterapeuta</li>
+                      <li>Reikiana e Passe Energético</li>
+                      <li>Fundadora da Casa Quintal de Ogum</li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- TODO: adicionar um card por terapeuta da equipe -->
+            <!-- JEAN CARLOS AMORIM -->
             <div class="carousel__slide">
               <div class="equipe-slide">
                 <div class="equipe-card">
                   <div class="equipe-card__foto">
-                    <div class="equipe-card__foto-ph">
-                      <span>🔥</span>
-                      <!-- TODO: inserir foto do próximo terapeuta -->
-                      Foto do terapeuta
-                    </div>
+                    <img src="img/jean.jpg" alt="Jean Carlos Amorim" onerror="this.style.display='none'">
+                    <div class="equipe-card__foto-ph"><span>🌀</span>Jean Carlos Amorim</div>
                   </div>
                   <div class="equipe-card__info">
-                    <div class="equipe-card__nome"><!-- TODO: nome --></div>
-                    <div class="equipe-card__cargo"><!-- TODO: especialidade --></div>
+                    <div class="equipe-card__nome">Jean Carlos Amorim</div>
+                    <div class="equipe-card__cargo">Constelador · Analista Comportamental</div>
                     <ul class="equipe-card__creds">
-                      <li><!-- TODO: credencial 1 --></li>
-                      <li><!-- TODO: credencial 2 --></li>
+                      <li>Constelador Sistêmico Familiar (Curso Avançado — ALMT)</li>
+                      <li>Analista Visual, Sistêmico e Comportamental</li>
+                      <li>Mestre em Reiki</li>
+                      <li>Condutor de Meditação</li>
+                      <li>Cromoterapeuta</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- EUNICE MAIA -->
+            <div class="carousel__slide">
+              <div class="equipe-slide">
+                <div class="equipe-card">
+                  <div class="equipe-card__foto">
+                    <img src="img/eunice.jpg" alt="Eunice Maia" onerror="this.style.display='none'">
+                    <div class="equipe-card__foto-ph"><span>💧</span>Eunice Maia</div>
+                  </div>
+                  <div class="equipe-card__info">
+                    <div class="equipe-card__nome">Eunice Maia</div>
+                    <div class="equipe-card__cargo">Consteladora · Coneterapeuta</div>
+                    <ul class="equipe-card__creds">
+                      <li>Consteladora Sistêmica Familiar (Curso Avançado — ALMT)</li>
+                      <li>Coneterapeuta</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- JOELSON SAMPAIO -->
+            <div class="carousel__slide">
+              <div class="equipe-slide">
+                <div class="equipe-card">
+                  <div class="equipe-card__foto">
+                    <img src="img/joelson.jpg" alt="Joelson Sampaio" onerror="this.style.display='none'">
+                    <div class="equipe-card__foto-ph"><span>🔥</span>Joelson Sampaio</div>
+                  </div>
+                  <div class="equipe-card__info">
+                    <div class="equipe-card__nome">Joelson Sampaio</div>
+                    <div class="equipe-card__cargo">Terapeuta dos 4 Elementos · Cofundador</div>
+                    <ul class="equipe-card__creds">
+                      <li>Constelador Sistêmico Familiar (Curso Avançado — ALMT)</li>
+                      <li>Guardião da Medicina Ayahuasca</li>
+                      <li>Aromaterapeuta e Cristaloterapeuta</li>
+                      <li>Reikiano Fitoterápico · Passe Energético</li>
+                      <li>Terapeuta em Cachoeira · Fundador da Casa Quintal de Ogum</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BRENO MONTALVÃO -->
+            <div class="carousel__slide">
+              <div class="equipe-slide">
+                <div class="equipe-card">
+                  <div class="equipe-card__foto">
+                    <img src="img/breno.jpg" alt="Breno Montalvão" onerror="this.style.display='none'">
+                    <div class="equipe-card__foto-ph"><span>✨</span>Breno Montalvão</div>
+                  </div>
+                  <div class="equipe-card__info">
+                    <div class="equipe-card__nome">Breno Montalvão</div>
+                    <div class="equipe-card__cargo">Instrutor de Yoga · Constelador</div>
+                    <ul class="equipe-card__creds">
+                      <li>Instrutor de Kundalini e Tantra Yoga</li>
+                      <li>Constelador Sistêmico Familiar (ALMT)</li>
+                      <li>Mestre em Reiki</li>
+                      <li>Praticante de Barras de Access</li>
                     </ul>
                   </div>
                 </div>
@@ -1016,54 +1092,23 @@
         <div class="carousel" id="carDep">
           <div class="carousel__track" id="trackDep">
 
-            <!-- TODO: substituir pelos depoimentos reais -->
             <div class="carousel__slide">
               <div class="dep-slide">
-                <div class="dep-card">
-                  <p class="dep-card__texto">
-                    "Cheguei sem esperança e sem acreditar em nada. A Daniela me acolheu sem julgamento nenhum.
-                    Depois da constelação, senti como se um peso que eu nem sabia que carregava tivesse
-                    sumido do meu peito."
-                  </p>
-                  <div class="dep-card__autor">M. R.</div>
-                  <div class="dep-card__servico">Constelação Familiar</div>
+                <div class="dep-card dep-card--img">
+                  <img src="img/dep-lucia.png" alt="Depoimento de Lucia R. no Instagram">
+                  <div class="dep-card__fonte">Comentário real no Instagram · @refugiodos4elementos</div>
                 </div>
               </div>
             </div>
 
             <div class="carousel__slide">
               <div class="dep-slide">
-                <div class="dep-card">
-                  <p class="dep-card__texto">
-                    "A imersão na cachoeira foi uma das experiências mais transformadoras da minha vida.
-                    Saí de lá sabendo quem eu sou de verdade."
-                  </p>
-                  <div class="dep-card__autor">J. C.</div>
-                  <div class="dep-card__servico">Imersão na Cachoeira</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel__slide">
-              <div class="dep-slide">
-                <div class="dep-card">
-                  <p class="dep-card__texto">
-                    "Nunca pensei que ia me sentir tão bem tratada num espaço assim. Sem pressão, sem
-                    obrigação, no meu tempo. O Refúgio é o nome certo."
-                  </p>
-                  <div class="dep-card__autor">A. S.</div>
-                  <div class="dep-card__servico">Reiki · Aromaterapia</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel__slide">
-              <div class="dep-slide">
-                <div class="dep-card">
-                  <!-- TODO: adicionar depoimento real -->
-                  <p class="dep-card__texto">"<!-- TODO: depoimento 4 -->"</p>
-                  <div class="dep-card__autor"><!-- TODO: iniciais --></div>
-                  <div class="dep-card__servico"><!-- TODO: terapia --></div>
+                <div class="dep-card dep-card--img">
+                  <div class="dep-imgs">
+                    <img src="img/dep-silvia-1.jpg" alt="Depoimento de Silvia via WhatsApp parte 1">
+                    <img src="img/dep-silvia-2.jpg" alt="Depoimento de Silvia via WhatsApp parte 2">
+                  </div>
+                  <div class="dep-card__fonte">Mensagem real no WhatsApp · Silvia</div>
                 </div>
               </div>
             </div>
