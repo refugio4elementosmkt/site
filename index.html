@@ -134,7 +134,8 @@
       background: radial-gradient(ellipse, rgba(139,111,168,.12) 0%, transparent 70%);
       pointer-events: none;
     }
-    .hero__grid { display: grid; gap: 52px; align-items: center; }
+    .hero__grid { display: grid; gap: 52px; align-items: center; text-align: center; }
+    .hero__ctas { justify-content: center; }
     @media(min-width:768px) { .hero__grid { grid-template-columns: 1fr 1fr; } }
 
     .hero__kicker {
@@ -144,8 +145,7 @@
       color: var(--lilas); margin-bottom: 18px;
       display: flex; align-items: center; gap: 8px;
     }
-    .hero__kicker::before { content: ''; display: block; width: 28px; height: 2px; background: var(--lilas); flex-shrink: 0; }
-    @media(max-width:767px) { .hero__kicker::before { display: none; } }
+    .hero__kicker::before { display: none; }
 
     .hero__h1 {
       font-family: var(--ff-titulo);
@@ -319,7 +319,7 @@
       display: flex; flex-direction: column;
     }
     .equipe-card__foto {
-      width: 100%; aspect-ratio: 4/5;
+      width: 100%; aspect-ratio: 4/5; max-height: 400px;
       background: linear-gradient(135deg, var(--lilas) 0%, var(--azul) 100%);
       position: relative; overflow: hidden;
     }
